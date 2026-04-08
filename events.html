@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - Sports Management System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+   
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --text-color: #333333;
+            --bg-color: #ffffff;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        .navbar {
+            background-color: var(--primary-color);
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+        }
+
+        .section {
+            padding: 40px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            margin-bottom: 20px;
+            background-color: var(--bg-color);
+            border: 1px solid var(--secondary-color);
+        }
+
+        .event-card {
+            border-left: 5px solid var(--secondary-color);
+        }
+
+        .event-image {
+            height: 200px;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        .event-date {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .event-venue {
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+
+        .event-prize {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .filter-buttons {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .filter-btn {
+            padding: 8px 20px;
+            margin: 5px;
+            border: 1px solid var(--secondary-color);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        .filter-btn.active {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        .footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 40px 0 20px;
+            margin-top: 50px;
+        }
+
+        .social-links a {
+            color: white;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="SMS.html">
+                <i class="fas fa-running"></i>
+                Sports Management System
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="SMS.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="events.html">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="register.html">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Events Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Upcoming Events</h2>
+            
+            <!-- Filter Buttons -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-category="all">All Events</button>
+                <button class="filter-btn" data-category="cricket">Cricket</button>
+                <button class="filter-btn" data-category="basketball">Basketball</button>
+                <button class="filter-btn" data-category="football">Football</button>
+                <button class="filter-btn" data-category="athletics">Athletics</button>
+                <button class="filter-btn" data-category="volleyball">Volleyball</button>
+                <button class="filter-btn" data-category="tennis">Tennis</button>
+            </div>
+
+            <!-- Events Grid -->
+            <div class="row">
+                <!-- Cricket Tournament -->
+                <div class="col-md-4 mb-4" data-category="cricket">
+                    <div class="card event-card">
+                        <img src="cricket.png" class="event-image" alt="Cricket Tournament">
+                        <div class="card-body">
+                            <h5 class="card-title">Cricket Tournament</h5>
+                            <p class="event-date"><i class="far fa-calendar-alt me-2"></i>20 June 2025</p>
+                            <p class="event-venue"><i class="fas fa-map-marker-alt me-2"></i>Cricket Ground</p>
+                            <p class="event-prize"><i class="fas fa-trophy me-2"></i>Prize Pool: ₹10,000</p>
+                            <p>Inter-university cricket tournament featuring teams from across the region.</p>
+                            <a href="login.html" class="btn btn-primary">Register Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Basketball Championship -->
+                <div class="col-md-4 mb-4" data-category="basketball">
+                    <div class="card event-card">
+                        <img src="basketball.png" class="event-image" alt="Basketball Championship">
+                        <div class="card-body">
+                            <h5 class="card-title">Basketball Championship</h5>
+                            <p class="event-date"><i class="far fa-calendar-alt me-2"></i>25 June 2025</p>
+                            <p class="event-venue"><i class="fas fa-map-marker-alt me-2"></i>Indoor Stadium</p>
+                            <p class="event-prize"><i class="fas fa-trophy me-2"></i>Prize Pool: ₹15,000</p>
+                            <p>Annual basketball championship with exciting matches and prizes.</p>
+                            <a href="login.html" class="btn btn-primary">Register Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Football Tournament -->
+                <div class="col-md-4 mb-4" data-category="football">
+                    <div class="card event-card">
+                        <img src="football.jpg" class="event-image" alt="Football Tournament">
+                        <div class="card-body">
+                            <h5 class="card-title">Football Tournament</h5>
+                            <p class="event-date"><i class="far fa-calendar-alt me-2"></i>28 June 2025</p>
+                            <p class="event-venue"><i class="fas fa-map-marker-alt me-2"></i>Football Ground</p>
+                            <p class="event-prize"><i class="fas fa-trophy me-2"></i>Prize Pool: ₹12,000</p>
+                            <p>Inter-college football tournament with exciting matches.</p>
+                            <a href="login.html" class="btn btn-primary">Register Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Athletics Meet -->
+                <div class="col-md-4 mb-4" data-category="athletics">
+                    <div class="card event-card">
+                        <img src="athletics.png" class="event-image" alt="Athletics Meet">
+                        <div class="card-body">
+                            <h5 class="card-title">Athletics Meet</h5>
+                            <p class="event-date"><i class="far fa-calendar-alt me-2"></i>30 June 2025</p>
+                            <p class="event-venue"><i class="fas fa-map-marker-alt me-2"></i>Sports Complex</p>
+                            <p class="event-prize"><i class="fas fa-trophy me-2"></i>Prize Pool: ₹20,000</p>
+                            <p>Annual athletics meet featuring various track and field events.</p>
+                            <a href="login.html" class="btn btn-primary">Register Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Volleyball Championship -->
+                <div class="col-md-4 mb-4" data-category="volleyball">
+                    <div class="card event-card">
+                        <img src="volley.jpeg" class="event-image" alt="Volleyball Championship">
+                        <div class="card-body">
+                            <h5 class="card-title">Volleyball Championship</h5>
+                            <p class="event-date"><i class="far fa-calendar-alt me-2"></i>10 July 2025</p>
+                            <p class="event-venue"><i class="fas fa-map-marker-alt me-2"></i>Indoor Court</p>
+                            <p class="event-prize"><i class="fas fa-trophy me-2"></i>Prize Pool: ₹12,000</p>
+                            <p>Show your volleyball skills in this exciting championship.</p>
+                            <a href="login.html" class="btn btn-primary">Register Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tennis Tournament -->
+                <div class="col-md-4 mb-4" data-category="tennis">
+                    <div class="card event-card">
+                        <img src="tennis.jpg" class="event-image" alt="Tennis Tournament">
+                        <div class="card-body">
+                            <h5 class="card-title">Tennis Tournament</h5>
+                            <p class="event-date"><i class="far fa-calendar-alt me-2"></i>15 July 2025</p>
+                            <p class="event-venue"><i class="fas fa-map-marker-alt me-2"></i>Tennis Court</p>
+                            <p class="event-prize"><i class="fas fa-trophy me-2"></i>Prize Pool: ₹18,000</p>
+                            <p>Participate in singles and doubles matches at our tennis tournament.</p>
+                            <a href="login.html" class="btn btn-primary">Register Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Sports Management System</h5>
+                    <p>A comprehensive platform for managing sports events and activities.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="SMS.html" class="text-light">Home</a></li>
+                        <li><a href="events.html" class="text-light">Events</a></li>
+                        <li><a href="news.html" class="text-light">News</a></li>
+                        <li><a href="register.html" class="text-light">Register</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p>
+                        123 University Avenue<br>
+                        City, State 12345<br>
+                        Email: sports@university.edu<br>
+                        Phone: (123) 456-7890
+                    </p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-12 text-center">
+                    <p class="mb-0">© 2025 Sports Management System. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Filter functionality
+        document.querySelectorAll('.filter-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                const category = button.getAttribute('data-category');
+                
+                document.querySelectorAll('.col-md-4').forEach(card => {
+                    if (category === 'all' || card.getAttribute('data-category') === category) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

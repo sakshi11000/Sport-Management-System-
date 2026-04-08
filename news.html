@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News - Sports Management System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --text-color: #333333;
+            --bg-color: #ffffff;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        .navbar {
+            background-color: var(--primary-color);
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+        }
+
+        .section {
+            padding: 40px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            margin-bottom: 20px;
+            background-color: var(--bg-color);
+            border: 1px solid var(--secondary-color);
+        }
+
+        .news-image {
+            height: 200px;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        .news-category {
+            color: var(--secondary-color);
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        .news-date {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .filter-buttons {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .filter-btn {
+            padding: 8px 20px;
+            margin: 5px;
+            border: 1px solid var(--secondary-color);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        .filter-btn.active {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        .footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 40px 0 20px;
+            margin-top: 50px;
+        }
+
+        .social-links a {
+            color: white;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="SMS.html">
+                <i class="fas fa-running"></i>
+                Sports Management System
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="SMS.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="events.html">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="news.html">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="register.html">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- News Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Latest Sports News</h2>
+            
+            <!-- Filter Buttons -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-category="all">All News</button>
+                <button class="filter-btn" data-category="achievements">Achievements</button>
+                <button class="filter-btn" data-category="updates">Updates</button>
+                <button class="filter-btn" data-category="announcements">Announcements</button>
+            </div>
+
+            <!-- News Grid -->
+            <div class="row">
+                <!-- Cricket Team Victory -->
+                <div class="col-md-4 mb-4" data-category="achievements">
+                    <div class="card">
+                        <img src="cricket.png" class="news-image" alt="Cricket Team">
+                        <div class="card-body">
+                            <span class="news-category">Achievements</span>
+                            <h5 class="card-title">Cricket Team Wins Inter-University Championship</h5>
+                            <p class="news-date"><i class="far fa-calendar-alt me-2"></i>15 June 2025</p>
+                            <p>Our university's cricket team emerged victorious in the Inter-University Championship.</p>
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Sports Complex -->
+                <div class="col-md-4 mb-4" data-category="updates">
+                    <div class="card">
+                        <img src="sports compelx.png" class="news-image" alt="Sports Complex">
+                        <div class="card-body">
+                            <span class="news-category">Updates</span>
+                            <h5 class="card-title">New Sports Complex Inauguration</h5>
+                            <p class="news-date"><i class="far fa-calendar-alt me-2"></i>12 June 2025</p>
+                            <p>The university's new state-of-the-art sports complex has been inaugurated.</p>
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Basketball Tournament -->
+                <div class="col-md-4 mb-4" data-category="announcements">
+                    <div class="card">
+                        <img src="basketball.png" class="news-image" alt="Basketball Tournament">
+                        <div class="card-body">
+                            <span class="news-category">Announcements</span>
+                            <h5 class="card-title">Basketball Tournament Registration Open</h5>
+                            <p class="news-date"><i class="far fa-calendar-alt me-2"></i>10 June 2025</p>
+                            <p>Registration for the upcoming basketball tournament is now open.</p>
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Athletics Records -->
+                <div class="col-md-4 mb-4" data-category="achievements">
+                    <div class="card">
+                        <img src="record.jpg" class="news-image" alt="Athletics">
+                        <div class="card-body">
+                            <span class="news-category">Achievements</span>
+                            <h5 class="card-title">New Athletics Records Set</h5>
+                            <p class="news-date"><i class="far fa-calendar-alt me-2"></i>8 June 2025</p>
+                            <p>Several new records were set during the annual athletics meet.</p>
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sports Scholarships -->
+                <div class="col-md-4 mb-4" data-category="announcements">
+                    <div class="card">
+                        <img src="sportscholarship.png" class="news-image" alt="Scholarships">
+                        <div class="card-body">
+                            <span class="news-category">Announcements</span>
+                            <h5 class="card-title">Sports Scholarships Available</h5>
+                            <p class="news-date"><i class="far fa-calendar-alt me-2"></i>5 June 2025</p>
+                            <p>The university is offering sports scholarships for outstanding athletes.</p>
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Training Program -->
+                <div class="col-md-4 mb-4" data-category="updates">
+                    <div class="card">
+                        <img src="training2.jpg" class="news-image" alt="Training">
+                        <div class="card-body">
+                            <span class="news-category">Updates</span>
+                            <h5 class="card-title">New Sports Training Program Launched</h5>
+                            <p class="news-date"><i class="far fa-calendar-alt me-2"></i>3 June 2025</p>
+                            <p>A comprehensive sports training program has been launched.</p>
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Sports Management System</h5>
+                    <p>A comprehensive platform for managing sports events and activities.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="SMS.html" class="text-light">Home</a></li>
+                        <li><a href="events.html" class="text-light">Events</a></li>
+                        <li><a href="news.html" class="text-light">News</a></li>
+                        <li><a href="register.html" class="text-light">Register</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p>
+                        123 University Avenue<br>
+                        City, State 12345<br>
+                        Email: sports@university.edu<br>
+                        Phone: (123) 456-7890
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="text-light me-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-light me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-light me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-light"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-12 text-center">
+                    <p class="mb-0">© 2025 Sports Management System. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Filter functionality
+        document.querySelectorAll('.filter-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                const category = button.getAttribute('data-category');
+                
+                document.querySelectorAll('.col-md-4').forEach(card => {
+                    if (category === 'all' || card.getAttribute('data-category') === category) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html> 
